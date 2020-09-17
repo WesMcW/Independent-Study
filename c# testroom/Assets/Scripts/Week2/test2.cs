@@ -50,5 +50,8 @@ public class test2 : MonoBehaviour
             anim.enabled = false;
             moving = true;
         }
+
+        yield return new WaitForSeconds(3f);
+        Debug.Log("hello");
     }
 }
