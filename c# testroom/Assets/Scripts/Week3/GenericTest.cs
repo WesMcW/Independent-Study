@@ -2,20 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class GenericTest<t> : MonoBehaviour
+public abstract class GenericTest<T> : MonoBehaviour
 {
-    t num1;
-    List<t> test = new List<t>();
+    List<T> test = new List<T>();
 
     public void PrintNum()
     {
-        foreach(t i in test)
+        foreach(T i in test)
         {
             Debug.Log(i);
         }
     }
 
-    public void AddNum(t num)
+    public void AddNum(T num)
     {
         test.Add(num);
     }
