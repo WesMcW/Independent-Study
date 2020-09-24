@@ -8,10 +8,12 @@ public class DictionaryTest : MonoBehaviour
 
     void Start()
     {
-        test.Add("Jump", 15);
+        test.Add("Punch", 5);
+        print(test["Punch"]);
+        print(test["Punch"].GetType());
 
-        print(test["Jump"]);
-
-        print(test["Jump"].GetType());
+        test.Add("Kick", 10);
+        print(test["Kick"]);
+        print(test["Kick"].GetType());
     }
 }
