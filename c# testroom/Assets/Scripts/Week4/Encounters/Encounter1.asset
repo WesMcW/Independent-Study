@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Test1
   desc: This is a description
-  op1: Attac
-  op2: Ron
-  op3: Use item
+  op1: Attack
+  option1Outcome: 1
+  op2: Use Item
+  option2Outcome: 3
+  op3: Run
+  option3Outcome: 2

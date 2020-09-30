@@ -19,5 +19,9 @@ public class Encounter : MonoBehaviour
         op1Text.text = sceneInfo.op1;
         op2Text.text = sceneInfo.op2;
         op3Text.text = sceneInfo.op3;
+
+        op1Text.GetComponentInParent<ButtonStuff>().myNum = sceneInfo.option1Outcome;
+        op2Text.GetComponentInParent<ButtonStuff>().myNum = sceneInfo.option2Outcome;
+        op3Text.GetComponentInParent<ButtonStuff>().myNum = sceneInfo.option3Outcome;
     }
 }
