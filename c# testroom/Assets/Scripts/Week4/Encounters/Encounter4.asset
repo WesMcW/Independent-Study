@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a48a9d9c61368b845b83d1a1eca75ebb, type: 3}
-  m_Name: Encounter1
+  m_Name: Encounter4
   m_EditorClassIdentifier: 
-  title: Test1
-  desc: This is a description
-  op1: Attack
-  option1: 2
-  op2: Use Item
+  title: The 4th one
+  desc: The party arrived
+  op1: Fight them
+  option1: 0
+  op2: Set up traps
   option2: 0
-  op3: Run
+  op3: Hide
   option3: 0

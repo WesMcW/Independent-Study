@@ -8,23 +8,18 @@ public class ButtonStuff : MonoBehaviour, IPointerClickHandler
     public Outcomes outcome;
     public int myNum;
 
+    public optionOutcome myOutcome;
     public void OnPointerClick(PointerEventData eventData)
     {
-        switch (myNum)
+        switch (myOutcome)
         {
-            case 1:
+            case optionOutcome.attack:
                 outcome.DoAttack();
                 break;
-            case 2:
+            case optionOutcome.run:
                 outcome.DoRun();
                 break;
-            case 3:
-                outcome.DoUseItem();
-                break;
-            case 4:
-                outcome.DoHeal();
-                break;
-            case 5:
+            case optionOutcome.trap:
                 outcome.DoTrap();
                 break;
             default:

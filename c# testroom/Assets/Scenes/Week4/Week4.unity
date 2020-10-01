@@ -176,6 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outcome: {fileID: 86794092}
   myNum: 1
+  myOutcome: 0
 --- !u!114 &24270139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outcome: {fileID: 86794092}
   myNum: 3
+  myOutcome: 0
 --- !u!114 &230602623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -922,6 +924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outcome: {fileID: 86794092}
   myNum: 2
+  myOutcome: 0
 --- !u!114 &1515123905
 MonoBehaviour:
   m_ObjectHideFlags: 0

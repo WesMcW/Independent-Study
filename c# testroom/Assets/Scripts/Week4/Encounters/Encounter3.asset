@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Numbah3
   desc: The party has made it to the bridge
-  op1: Eat food and bulk up
-  option1Outcome: 4
+  op1: Lay down traps
+  option1: 1
   op2: Face them head on
-  option2Outcome: 1
-  op3: Let them cross
-  option3Outcome: 0
+  option2: 2
+  op3: Run away
+  option3: 0
