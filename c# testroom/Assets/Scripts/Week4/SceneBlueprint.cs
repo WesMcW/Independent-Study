@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Scene", menuName = "ScriptableObjects/Scene", order = 1)]
+[CreateAssetMenu(fileName = "New Encounter", menuName = "ScriptableObjects/Encounter", order = 1)]
 public class SceneBlueprint : ScriptableObject
 {
     public string title, desc;
