@@ -24,4 +24,8 @@ public class Outcomes : MonoBehaviour
     {
         Debug.Log("Nothing happened.");
     }
+    public void DoTrap()
+    {
+        Debug.Log("A trap has been set!");
+    }
 }

@@ -24,6 +24,9 @@ public class ButtonStuff : MonoBehaviour, IPointerClickHandler
             case 4:
                 outcome.DoHeal();
                 break;
+            case 5:
+                outcome.DoTrap();
+                break;
             default:
                 outcome.DoNothing();
                 break;

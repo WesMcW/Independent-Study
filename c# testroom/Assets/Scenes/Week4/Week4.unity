@@ -608,7 +608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a9139aca3560e4fa3adf22c79e3fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneInfo: {fileID: 11400000, guid: 57a76a6ca6376124190d68ab3cc9600b, type: 2}
+  sceneInfo: {fileID: 11400000, guid: c22a8d4a9cd69aa478108ba8336cbf4f, type: 2}
   titleText: {fileID: 1950150306}
   descText: {fileID: 1723594272}
   op1Text: {fileID: 468947330}
@@ -1008,7 +1008,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: New Text
