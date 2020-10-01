@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class Outcomes : MonoBehaviour
 {
-    public delegate void MyDelegate();
-
-    public MyDelegate myDel;
-
     public void DoAttack()
     {
         Debug.Log("Attack!");
