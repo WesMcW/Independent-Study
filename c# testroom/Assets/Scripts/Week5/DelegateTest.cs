@@ -7,23 +7,40 @@ public class DelegateTest : MonoBehaviour
 {
     public delegate void SingleUse();
     SingleUse single;
-    public static event SingleUse Single;
+
+    public delegate void MultiUse();
+    public static event MultiUse multi;
 
     public int myNum;
 
     private void Start()
     {
-        Single += CountUp;
+        multi += DestroyOnClick;
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
-            if(Single != null)
+            DestroyOnClick();
+        }
+    }
+
+    public void DestroyOnClick()
+    {
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if(Physics.Raycast(ray, out hit))
+        {
+            if (hit.transform.CompareTag("Dude"))
             {
-                CountUp();
-            }
+                if (multi != null)
+                {
+                    CountUp();
+                    hit.transform.gameObject.GetComponent<Respawn>().dead = true;
+                }
+            }        
         }
     }
 
