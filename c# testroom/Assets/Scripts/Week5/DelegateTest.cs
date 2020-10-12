@@ -6,16 +6,16 @@ using UnityEngine.Events;
 public class DelegateTest : MonoBehaviour
 {
     public delegate void SingleUse();
-    SingleUse single;
+    public static event SingleUse single;
 
     public delegate void MultiUse();
     public static event MultiUse multi;
 
-    public int myNum;
+    public static int myNum;
 
     private void Start()
     {
-        multi += DestroyOnClick;
+
     }
 
     private void Update()
@@ -23,6 +23,12 @@ public class DelegateTest : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             DestroyOnClick();
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (single != null)
+                single();
         }
     }
 
@@ -33,20 +39,10 @@ public class DelegateTest : MonoBehaviour
 
         if(Physics.Raycast(ray, out hit))
         {
-            if (hit.transform.CompareTag("Dude"))
+            if (hit.transform.CompareTag("Dude") && !hit.transform.gameObject.GetComponent<Respawn>().dead)
             {
-                if (multi != null)
-                {
-                    CountUp();
-                    hit.transform.gameObject.GetComponent<Respawn>().dead = true;
-                }
+                hit.transform.gameObject.GetComponent<Respawn>().dead = true;
             }        
         }
-    }
-
-    public void CountUp()
-    {
-        myNum++;
-        print(myNum);
     }
 }

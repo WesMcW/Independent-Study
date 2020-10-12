@@ -6,10 +6,14 @@ public class Respawn : MonoBehaviour
 {
 
     public bool dead;
+    DelegateTest.MultiUse test;
+
+    DelegateTest.SingleUse test2;
 
     private void Start()
     {
-        DelegateTest.multi += TurnOff;
+        test += CountUp;
+        test2 += TurnOn;
     }
 
     private void Update()
@@ -23,5 +27,21 @@ public class Respawn : MonoBehaviour
     public void TurnOff()
     {
         gameObject.SetActive(false);
+        if (test != null)
+        {
+            test();
+        }
+    }
+
+    public void CountUp()
+    {
+        DelegateTest.myNum++;
+        print(DelegateTest.myNum);
+    }
+
+    public void TurnOn()
+    {
+        gameObject.SetActive(true);
+        dead = false;
     }
 }
