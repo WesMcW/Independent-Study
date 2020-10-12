@@ -13,6 +13,8 @@ public class DelegateTest : MonoBehaviour
 
     public static int myNum;
 
+    public List<GameObject> cubes;
+
     private void Start()
     {
 
@@ -42,7 +44,20 @@ public class DelegateTest : MonoBehaviour
             if (hit.transform.CompareTag("Dude") && !hit.transform.gameObject.GetComponent<Respawn>().dead)
             {
                 hit.transform.gameObject.GetComponent<Respawn>().dead = true;
+                //cubes.Add(hit.transform.gameObject);
             }        
         }
     }
+
+    /*
+    public void ResetCubes()
+    {
+        foreach(GameObject dude in cubes)
+        {
+            dude.SetActive(true);
+            dude.GetComponent<Respawn>().dead = false;
+            cubes = new List<GameObject>();
+        }
+    }
+    */
 }
