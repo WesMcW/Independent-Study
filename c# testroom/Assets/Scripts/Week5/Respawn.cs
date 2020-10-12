@@ -8,12 +8,10 @@ public class Respawn : MonoBehaviour
     public bool dead;
     DelegateTest.MultiUse test;
 
-    DelegateTest.SingleUse test2;
-
     private void Start()
     {
         test += CountUp;
-        test2 += TurnOn;
+        DelegateTest.single += TurnOn;
     }
 
     private void Update()

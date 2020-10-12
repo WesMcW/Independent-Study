@@ -48,16 +48,4 @@ public class DelegateTest : MonoBehaviour
             }        
         }
     }
-
-    /*
-    public void ResetCubes()
-    {
-        foreach(GameObject dude in cubes)
-        {
-            dude.SetActive(true);
-            dude.GetComponent<Respawn>().dead = false;
-            cubes = new List<GameObject>();
-        }
-    }
-    */
 }
