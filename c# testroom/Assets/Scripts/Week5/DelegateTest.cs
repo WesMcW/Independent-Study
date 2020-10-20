@@ -8,17 +8,10 @@ public class DelegateTest : MonoBehaviour
     public delegate void SingleUse();
     public static event SingleUse single;
 
-    public delegate void MultiUse();
+    public delegate void MultiUse(int num);
     public static event MultiUse multi;
 
     public static int myNum;
-
-    public List<GameObject> cubes;
-
-    private void Start()
-    {
-
-    }
 
     private void Update()
     {
@@ -44,7 +37,6 @@ public class DelegateTest : MonoBehaviour
             if (hit.transform.CompareTag("Dude") && !hit.transform.gameObject.GetComponent<Respawn>().dead)
             {
                 hit.transform.gameObject.GetComponent<Respawn>().dead = true;
-                //cubes.Add(hit.transform.gameObject);
             }        
         }
     }

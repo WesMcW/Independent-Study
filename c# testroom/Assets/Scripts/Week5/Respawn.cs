@@ -27,13 +27,13 @@ public class Respawn : MonoBehaviour
         gameObject.SetActive(false);
         if (test != null)
         {
-            test();
+            test(2);
         }
     }
 
-    public void CountUp()
+    public void CountUp(int num)
     {
-        DelegateTest.myNum++;
+        DelegateTest.myNum += num;
         print(DelegateTest.myNum);
     }
 
