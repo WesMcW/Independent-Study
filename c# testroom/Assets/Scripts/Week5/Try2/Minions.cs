@@ -12,11 +12,13 @@ public class Minions : MonoBehaviour
 
     void Start()
     {
-        MinionAlive();
+        if (MinionAlive != null)
+            MinionAlive();
     }
 
     private void OnDestroy()
     {
-        MinionDead();
+        if (MinionDead != null)
+            MinionDead();
     }
 }

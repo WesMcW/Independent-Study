@@ -7,10 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public int num = 0;
     public Text numText;
-    void Start()
-    {
 
-    }
 
     private void Awake()
     {
