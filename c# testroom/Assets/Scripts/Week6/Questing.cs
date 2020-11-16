@@ -11,13 +11,26 @@ public class Questing : MonoBehaviour
 
     public Sprite icon1, icon2, icon3;
 
-    private void Update()
+
+    public void PickQuest()
     {
-        if (Quest == QuestType.Killing)
+        int rand = Random.Range(1, 4);
+
+        if(rand == 1)
+        {
+            Quest = QuestType.Killing;
             GetComponent<SpriteRenderer>().sprite = icon1;
-        else if (Quest == QuestType.Gathering)
+        }
+        else if(rand == 2)
+        {
+            Quest = QuestType.Gathering;
             GetComponent<SpriteRenderer>().sprite = icon2;
-        else if (Quest == QuestType.Traveling)
+        }
+        else
+        {
+            Quest = QuestType.Traveling;
             GetComponent<SpriteRenderer>().sprite = icon3;
+        }
+
     }
 }
