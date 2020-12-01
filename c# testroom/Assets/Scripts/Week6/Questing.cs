@@ -31,6 +31,5 @@ public class Questing : MonoBehaviour
             Quest = QuestType.Traveling;
             GetComponent<SpriteRenderer>().sprite = icon3;
         }
-
     }
 }

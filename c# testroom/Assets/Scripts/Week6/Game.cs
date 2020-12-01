@@ -10,13 +10,6 @@ public class Game : MonoBehaviour
 
     public GameObject paused, gameover;
 
-    private void Update()
-    {
-        if (gState == GameState.Active)
-        {
-            Time.timeScale = 1;
-        }
-    }
 
     public void PauseGame()
     {
@@ -39,5 +32,6 @@ public class Game : MonoBehaviour
         gameover.SetActive(false);
         paused.SetActive(false);
         gState = GameState.Active;
+        Time.timeScale = 1;
     }
 }
